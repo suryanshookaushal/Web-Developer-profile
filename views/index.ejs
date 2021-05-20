@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <title>Internship Task</title>
+    <body>
+        <div class="header">
+            <h1>HODLINFO</h1><p class="com">.com</p><br>
+            <p class="power">Powered by </p><p class="company">Finstreet</p>
+            <select class="first">
+                <option value="tesla">INR</option>
+                <option value="volvo">BTC</option>
+                <option value="mercedes">XRP</option>
+            </select>
+            <select class="second">
+                <option value="tesla">BTC</option>
+                <option value="volvo">INR</option>
+                <option value="mercedes">XRP</option>
+            </select>
+            <button class="fourth">59</button>
+            <button>
+                <i class="fa fa-telegram"></i> Connect Telegram
+            </button>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th><h4>#</h4></th>
+                    <th><h4>Name</h4></th>
+                    <th><h4>Last</h4></th>
+                    <th><h4>Buy/Sell Price</h4></th>
+                    <th><h4>Volume</h4></th>
+                    <th><h4>Base Unit</h4></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0;i<10;i++) { %>
+                    <tr>
+                        <td><h4><%=i+1%></h4></td>
+                        <td><h4><%=data[i].name%></h4></td>
+                        <td><h4>₹ <%=Math.ceil(data[i].last).toLocaleString('en-US')%></h4></td>
+                        <td><h4>₹ <%=Math.ceil(data[i].buy).toLocaleString('en-US')%> / ₹ <%=Math.ceil(data[i].sell).toLocaleString('en-US')%></h4></td>
+                        <td><h4><%=data[i].volume%></h4></td>
+                        <td><h4><%=data[i].base_unit%></h4></td>
+                    </tr>
+               <% } %>
+            </tbody>
+        </table>
+    </body>
+</html>
